@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a basic contact form, made by catalinafs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>L<span>OG</span>O</h1>
+
+        <ul>
+            <li>
+                <a href="#Home">Home</a>
+            </li>
+            <li>
+                <a href="#Plans">Plans</a>
+            </li>
+            <li>
+                <a href="#Gmail">hello@tales.com</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Main -->
+    <main id="Main">
+        <section>
+            <h2>Tus tareas jamas fueron tan <span>faciles</span></h2>
+            <p>
+                ¿Alguna vez has estado abrumado con la cantidad de tareas que tienes que hacer y no tienes suficiente
+                tiempo para completarlas todas? Si la respuesta es sí, ¡estás en el lugar correcto! Nuestro servicio fue
+                creado para ayudarte!
+            </p>
+            <div>
+                <button id="Contact">Contactanos</button>
+                <button>Conoce mas</button>
+            </div>
+        </section>
+        <picture>
+            <img src="./assets/img/hero.webp" alt="hero_img" />
+        </picture>
+    </main>
+
+    <!-- Form -->
+    <section id="ContainerModal" style="display: none;">
+        <section class="Modal">
+            <h2>Send Mail To Us</h2>
+    
+            <button id="CloseButton">X</button>
+    
+            <form class="ContainerInputs">
+                <input type="text" id="Subject" name="subject" placeholder="Asunto:" class="Form" required/>
+                <textarea name="message" id="Message" placeholder="Descripcion:" class="Form" required></textarea>
+                <button type="submit" id="SendButton">Enviar</button>
+            </form>
+    
+            <picture>
+                <img src="./assets/img/work.webp" alt="form_img">
+            </picture>
+        </section>
+    </section>
+</body>
+
+</html>
+
+<script src="./index.js"></script>

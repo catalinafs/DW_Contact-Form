@@ -1,0 +1,450 @@
+:root {
+    --1: #ffffff;
+    --2: #252525;
+    --3: #5f9ea0;
+    --4: #959da533;
+    --5: #f8f8f8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', sans-serif;
+    animation: animated .7s;
+}
+
+@keyframes animated {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-size: large;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+
+/* Header Styles */
+
+header {
+    padding: 16px 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000000;
+}
+
+header>h1 {
+    font-size: 27px;
+}
+
+header>h1>span {
+    color: var(--3);
+}
+
+header>ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header>ul>li>a {
+    text-decoration: none;
+    color: var(--2);
+}
+
+header>ul>li>a:hover {
+    color: var(--3);
+}
+
+
+/* Main Styles */
+
+main {
+    height: 80vh;
+    width: 100%;
+    margin: 16px 0;
+    padding: 0 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+main>section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main>section>h2>span {
+    color: var(--3);
+}
+
+section>p {
+    margin-top: 16px;
+}
+
+button {
+    border: none;
+    font-size: large;
+    background: none;
+    background-color: var(--1);
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: var(--2);
+    cursor: pointer;
+}
+
+main>section>div>button:first-child {
+    background-color: var(--3);
+    color: var(--2);
+    margin: 5px 0;
+}
+
+main>section>div>button:first-child:hover {
+    opacity: 90%;
+}
+
+main>section>div>button:last-child:hover {
+    color: var(--3);
+}
+
+picture>img {
+    width: 555px;
+    height: 352.29px;
+}
+
+
+/* Form Styles */
+
+#ContainerModal {
+    background-color: var(--1);
+    transition: all .7s ease-in-out;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    padding: 0 128px;
+    z-index: 1000;
+}
+
+.Modal {
+    width: 82vw;
+    height: 80vh;
+    margin: 16px 0px;
+    font-size: larger;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "title button"
+        "form img";
+    place-content: center;
+    position: relative;
+}
+
+.Modal>h2 {
+    grid-area: title;
+    color: var(--3);
+    font-size: 21.6px;
+    font-weight: 100;
+    margin-bottom: 36px;
+}
+
+.Modal>button {
+    grid-area: button;
+    padding: 0;
+    font-size: 21.6px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.Modal>form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form {
+    width: 100%;
+    margin: 8px;
+    padding: 8px 0px;
+    font-size: larger;
+    border: none;
+    box-shadow: var(--4) 0px 8px 24px;
+    background-color: var(--5);
+}
+
+.Modal>form>textarea {
+    height: 216px;
+}
+
+.Modal>form>button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 0px;
+    color: var(--1);
+    font-size: larger;
+    background-color: var(--3);
+}
+
+.Modal>picture {
+    grid-area: img;
+}
+
+.Modal>picture>img {
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+/* x-sm */
+@media (width <=512px) {
+    
+    /* Header Styles */
+    header {
+        padding: 14px 20px;
+    }
+
+    header>ul {
+        display: none;
+    }
+
+    /* Main Styles */
+    main {
+        padding: 0 20px;
+        margin: 45px 0;
+        flex-direction: column-reverse;
+    }
+
+    main>section {
+        width: 100%;
+    }
+
+    main>section>h2 {
+        font-size: large;
+    }
+
+    section>p {
+        font-size: small;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: x-small;
+    }
+
+    picture>img {
+        width: 250px;
+        height: 150px;
+    }
+
+    /* Form Styles */
+    #ContainerModal {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .Modal {
+        grid-template-columns: none;
+    }
+
+    .Modal>h2 {
+        font-size: smaller;
+    }
+
+    .Modal>form {
+        width: 100%;
+    }
+
+    .Form {
+        font-size: medium;
+    }
+
+    .Modal>form>textarea {
+        width: 210px;
+    }
+
+    .Modal>form>button {
+        font-size: medium;
+    }
+
+    .Modal>picture {
+        display: none;
+    }
+}
+
+/* sm */
+@media (512px < width <=640px) {
+
+    /* Header Styles */
+    header {
+        padding: 14px 30px;
+    }
+
+    header>ul {
+        display: none;
+    }
+
+    /* Main Styles */
+    main {
+        padding: 0 30px;
+        flex-direction: column-reverse;
+    }
+
+    main>section {
+        width: 100%;
+    }
+
+    main>section>h2 {
+        font-size: larger;
+    }
+
+    section>p {
+        font-size: large;
+        margin-bottom: 16px;
+    }
+
+    button {
+        font-size: medium;
+    }
+
+    picture>img {
+        width: 400px;
+        height: 250px;
+    }
+
+    /* Form Styles */
+    #ContainerModal {
+        padding-right: 30px;
+        padding-left: 50px;
+    }
+
+    .Modal {
+        grid-template-columns: none;
+    }
+
+    .Modal>form {
+        width: 100%;
+    }
+
+    .Form {
+        font-size: large;
+    }
+
+    .Modal>form>textarea {
+        width: 400px;
+    }
+
+    .Modal>form>button {
+        font-size: large;
+    }
+
+    .Modal>picture {
+        display: none;
+    }
+}
+
+/* md */
+@media (640px < width <=768px) {
+
+    /* Header Styles */
+    header {
+        padding: 16px 55px;
+    }
+
+    header>ul {
+        display: none;
+    }
+
+    /* Main Styles */
+    main {
+        padding: 0 55px;
+        flex-direction: column-reverse;
+        margin-top: 16px;
+    }
+
+    main>section {
+        width: 100%;
+    }
+
+    main>section>h2 {
+        font-size: x-large;
+    }
+
+    picture>img {
+        width: 500px;
+        height: 300px;
+    }
+
+    /* Form Styles */
+    #ContainerModal {
+        padding: 0 55px;
+    }
+
+    .Modal {
+        grid-template-columns: none;
+    }
+
+    .Modal>form {
+        width: 100%;
+    }
+
+    .Modal>form>textarea {
+        width: 100%;
+    }
+
+    .Modal>picture {
+        display: none;
+    }
+}
+
+/* lg */
+@media (768px < width <=1010px) {
+
+    /* Header Styles */
+    header {
+        padding: 16px 100px;
+    }
+
+    /* Main Styles */
+    main {
+        padding: 64px 100px;
+        flex-direction: column-reverse;
+    }
+
+    main>section {
+        width: 90%;
+    }
+
+    picture>img {
+        width: 400px;
+        height: 250px;
+    }
+
+    #ContainerModal {
+        padding: 0 100px;
+    }
+}
