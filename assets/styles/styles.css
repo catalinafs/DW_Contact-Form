@@ -37,7 +37,6 @@ body {
     overflow: auto;
 }
 
-
 /* Header Styles */
 
 header {
@@ -71,7 +70,6 @@ header>ul>li>a {
 header>ul>li>a:hover {
     color: var(--3);
 }
-
 
 /* Main Styles */
 
@@ -131,8 +129,7 @@ picture>img {
     height: 352.29px;
 }
 
-
-/* Form Styles */
+/* Contact Form Styles */
 
 #ContainerModal {
     background-color: var(--1);
@@ -216,8 +213,7 @@ picture>img {
     width: 100%;
 }
 
-
-/* Media Queries */
+/* Media Queries Styles */
 
 /* x-sm */
 @media (width <=512px) {
