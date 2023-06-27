@@ -39,7 +39,7 @@ body {
 
 /* Header Styles */
 
-header {
+nav {
     padding: 16px 128px;
     display: flex;
     align-items: center;
@@ -47,27 +47,27 @@ header {
     z-index: 1000000;
 }
 
-header>h1 {
+nav>h1 {
     font-size: 27px;
 }
 
-header>h1>span {
+nav>h1>span {
     color: var(--3);
 }
 
-header>ul {
+nav>ul {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 32px;
 }
 
-header>ul>li>a {
+nav>ul>li>a {
     text-decoration: none;
     color: var(--2);
 }
 
-header>ul>li>a:hover {
+nav>ul>li>a:hover {
     color: var(--3);
 }
 
@@ -219,11 +219,11 @@ picture>img {
 @media (width <=512px) {
     
     /* Header Styles */
-    header {
+    nav {
         padding: 14px 20px;
     }
 
-    header>ul {
+    nav>ul {
         display: none;
     }
 
@@ -296,11 +296,11 @@ picture>img {
 @media (512px < width <=640px) {
 
     /* Header Styles */
-    header {
+    nav {
         padding: 14px 30px;
     }
 
-    header>ul {
+    nav>ul {
         display: none;
     }
 
@@ -367,11 +367,11 @@ picture>img {
 @media (640px < width <=768px) {
 
     /* Header Styles */
-    header {
+    nav {
         padding: 16px 55px;
     }
 
-    header>ul {
+    nav>ul {
         display: none;
     }
 
@@ -421,7 +421,7 @@ picture>img {
 @media (768px < width <=1010px) {
 
     /* Header Styles */
-    header {
+    nav {
         padding: 16px 100px;
     }
 
